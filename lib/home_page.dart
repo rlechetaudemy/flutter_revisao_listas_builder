@@ -24,12 +24,25 @@ class HomePage extends StatelessWidget {
   }
 
   _img(String s) {
-    return Container(
-      height: 300,
-      child: Image.asset(
-        "assets/images/$s",
-        fit: BoxFit.cover,
-      ),
+    return Stack(
+      children: <Widget>[
+        Container(
+          height: 300,
+          child: Image.asset(
+            "assets/images/$s",
+            fit: BoxFit.cover,
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.all(6),
+          decoration: BoxDecoration(color: Colors.black45),
+          child: Text(
+            "Dog $s",
+            style: TextStyle(fontSize: 25, color: Colors.white),
+          ),
+        )
+      ],
     );
   }
 }
