@@ -24,7 +24,7 @@ class DogService {
       final dogs = lista.map<Dog>(
               (json) => Dog.fromJson(json)).toList();
 
-      //print("Dogs $dogs");
+      print("Dogs $dogs");
 
       return dogs;
     } catch (error) {
@@ -36,11 +36,11 @@ class DogService {
 
     final list = List<Dog>();
 
-    list.add(Dog("Dog 1","dog1.png"));
-    list.add(Dog("Dog 2","dog2.png"));
-    list.add(Dog("Dog 3","dog3.png"));
-    list.add(Dog("Dog 4","dog4.png"));
-    list.add(Dog("Dog 5","dog5.png"));
+    list.add(Dog("Jack Russell","dog1.png"));
+    list.add(Dog("Labrador","dog2.png"));
+    list.add(Dog("Pug","dog3.png"));
+    list.add(Dog("Rottweiler","dog4.png"));
+    list.add(Dog("Pastor","dog5.png"));
 
     return list;
   }

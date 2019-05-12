@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_revisao_listas_builder/domain/dog.dart';
+import 'package:flutter_revisao_listas_builder/domain/dog_service.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -12,24 +14,25 @@ class HomePage extends StatelessWidget {
   }
 
   _body() {
-    return ListView(
-      children: <Widget>[
-        _img("dog1.png"),
-        _img("dog2.png"),
-        _img("dog3.png"),
-        _img("dog4.png"),
-        _img("dog5.png"),
-      ],
+    List<Dog> dogs = DogService.getDogsNormal();
+
+    return ListView.builder(
+      itemCount: dogs.length,
+      itemBuilder: (context, idx) {
+        Dog dog = dogs[idx];
+
+        return _dogView(dog);
+      }
     );
   }
 
-  _img(String s) {
+  _dogView(Dog dog) {
     return Stack(
       children: <Widget>[
         Container(
           height: 300,
           child: Image.asset(
-            "assets/images/$s",
+            "assets/images/${dog.foto}",
             fit: BoxFit.cover,
           ),
         ),
@@ -38,7 +41,7 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.all(6),
           decoration: BoxDecoration(color: Colors.black45),
           child: Text(
-            "Dog $s",
+            "${dog.nome}",
             style: TextStyle(fontSize: 25, color: Colors.white),
           ),
         )
