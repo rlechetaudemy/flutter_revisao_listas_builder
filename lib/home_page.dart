@@ -14,15 +14,28 @@ class HomePage extends StatelessWidget {
   }
 
   _body() {
-    List<Dog> dogs = DogService.getDogsNormal();
+    Future<List<Dog>> future = DogService.getDogs();
 
-    return ListView.builder(
-      itemCount: dogs.length,
-      itemBuilder: (context, idx) {
-        Dog dog = dogs[idx];
-
-        return _dogView(dog);
+    return FutureBuilder(
+      future: future,
+      builder: (context, snapshot) {
+        if(! snapshot.hasData) {
+          return Center(child: CircularProgressIndicator(),);
+        }
+        List<Dog> dogs = snapshot.data;
+        return _listView(dogs);
       }
+    );
+  }
+
+  _listView(List<Dog> dogs) {
+    return ListView.builder(
+        itemCount: dogs.length,
+        itemBuilder: (context, idx) {
+          Dog dog = dogs[idx];
+
+          return _dogView(dog);
+        }
     );
   }
 

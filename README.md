@@ -11,3 +11,5 @@ Revisão sobre ListView, PageView, GridView e Futures
 - 2_dinamico_2_map: Exemplo de como utilizar a função map.
 
 - 3_listview_builder: Review sobre o ListView.builder.
+
+- 4_future_builder: Review sobre FutureBuilder
