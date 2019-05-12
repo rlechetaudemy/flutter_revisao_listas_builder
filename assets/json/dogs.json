@@ -1,0 +1,86 @@
+{
+  "dataAula": "11/05/2019",
+  "qtdeAlunos": 10,
+  "lista" : [
+    {
+      "nome": "Filhote A",
+      "foto": "dog1.png"
+    },
+    {
+      "nome": "Labrador",
+      "foto": "dog2.png"
+    },
+    {
+      "nome": "Pug",
+      "foto": "dog3.png"
+    },
+    {
+      "nome": "Rotwailler",
+      "foto": "dog4.png"
+    },
+    {
+      "nome": "Pastor",
+      "foto": "dog5.png"
+    },
+    {
+      "nome": "Dog 1",
+      "foto": "dog1.png"
+    },
+    {
+      "nome": "Dog 2",
+      "foto": "dog2.png"
+    },
+    {
+      "nome": "Dog 3",
+      "foto": "dog3.png"
+    },
+    {
+      "nome": "Dog 4",
+      "foto": "dog4.png"
+    },
+    {
+      "nome": "Dog 5",
+      "foto": "dog5.png"
+    },
+    {
+      "nome": "Dog 1",
+      "foto": "dog1.png"
+    },
+    {
+      "nome": "Dog 2",
+      "foto": "dog2.png"
+    },
+    {
+      "nome": "Dog 3",
+      "foto": "dog3.png"
+    },
+    {
+      "nome": "Dog 4",
+      "foto": "dog4.png"
+    },
+    {
+      "nome": "Dog 5",
+      "foto": "dog5.png"
+    },
+    {
+      "nome": "Dog 1",
+      "foto": "dog1.png"
+    },
+    {
+      "nome": "Dog 2",
+      "foto": "dog2.png"
+    },
+    {
+      "nome": "Dog 3",
+      "foto": "dog3.png"
+    },
+    {
+      "nome": "Dog 4",
+      "foto": "dog4.png"
+    },
+    {
+      "nome": "Dog 5",
+      "foto": "dog5.png"
+    }
+  ]
+}
